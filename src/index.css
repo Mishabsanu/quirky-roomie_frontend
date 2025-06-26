@@ -1,0 +1,13 @@
+body {
+  height: 100%;
+}
+
+.card-plus {
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform ease !important;
+  transition-duration: 0.2s !important;
+}
+.card-plus:hover {
+  transform: scale(1.05) !important;
+}
