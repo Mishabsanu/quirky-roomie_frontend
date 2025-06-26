@@ -20,19 +20,19 @@ export default function Register() {
   const navigate = useNavigate();
 
   const initialValues = {
-    name: "",
+    username: "",
     email: "",
     password: "",
-    flatCode: "", 
+    flatCode: "",
   };
 
   const validationSchema = Yup.object({
-    name: Yup.string().required("Name is required"),
+    username: Yup.string().required("Name is required"),
     email: Yup.string().email("Invalid email").required("Email is required"),
     password: Yup.string()
       .min(6, "Password must be at least 6 characters")
       .required("Password is required"),
-    flatCode: Yup.string().required("Flat Code is required"), 
+    flatCode: Yup.string().required("Flat Code is required"),
   });
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
@@ -86,12 +86,12 @@ export default function Register() {
               <TextField
                 fullWidth
                 label="Name"
-                name="name"
-                value={values.name}
+                name="username"
+                value={values.username}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                error={Boolean(touched.name && errors.name)}
-                helperText={touched.name && errors.name}
+                error={Boolean(touched.username && errors.username)}
+                helperText={touched.username && errors.username}
                 margin="normal"
               />
               <TextField
